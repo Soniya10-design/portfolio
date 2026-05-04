@@ -1,54 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<h1>My Portfolio</h1>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">YN</div>
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <button id="theme-toggle">☀ Light</button>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-</nav>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#achievements" onclick="closeMobile()">Achievements</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
 
-<section id="home">
-    <h2>Home</h2>
-    <p>Your Name + Intro</p>
-</section>
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-container">
+      <img
+        src="assets/profile.jpg"
+        alt="Profile Photo"
+        class="profile-img"
+        onerror="this.src='https://ui-avatars.com/api/?name=Your+Name&size=150&background=6c63ff&color=fff&rounded=true'"
+      />
+      <h1>Your Name</h1>
+      <p class="hero-subtitle">B.Tech CSE Student · AI Enthusiast · Web Developer</p>
+      <p class="hero-desc">
+        Passionate Computer Science student at MIT VPU, Pune with interests in AI, web development,
+        and building solutions that create real impact.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Projects</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>Education, goals, interests</p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-heading">About Me</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          Hi! I'm <strong>Your Name</strong>, a B.Tech Computer Science student passionate about
+          technology, artificial intelligence, and continuous personal growth.
+        </p>
+        <p>
+          I am currently pursuing my Bachelor of Technology in Computer Science Engineering,
+          building strong foundations in programming, data structures, AI/ML, and web development.
+        </p>
+        <p>
+          My goal is to become an AI/ML Engineer and contribute to impactful technology solutions
+          that bridge the gap between smart systems and human needs.
+        </p>
 
-<section id="achievements">
-    <h2>Achievements</h2>
-    <p>Your certificates & awards</p>
-</section>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-label">🎓 College</span>
+            <span>MIT Vishwaprayag University, Pune</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">📅 Year</span>
+            <span>2023 – 2027 (2nd Year)</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">📍 Location</span>
+            <span>Solapur, Maharashtra</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">🎯 Goal</span>
+            <span>AI/ML Engineer</span>
+          </div>
+        </div>
+      </div>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <p>Project details</p>
-</section>
+      <div class="interests-box">
+        <h3>Interests &amp; Strengths</h3>
+        <ul>
+          <li>Artificial Intelligence &amp; Machine Learning</li>
+          <li>Web Development (HTML, CSS, JS)</li>
+          <li>Data Science &amp; Analytics</li>
+          <li>Design Thinking &amp; Problem Solving</li>
+          <li>Communication &amp; Teamwork</li>
+          <li>Critical Thinking</li>
+          <li>Python Programming</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <img src="images/photo1.jpg" width="200">
-</section>
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="alt-section">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-heading">Achievements &amp; Certificates</h2>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email, Phone, LinkedIn</p>
-</section>
+    <div class="achievements-grid">
 
-<script src="script.js"></script>
+      <div class="achieve-card">
+        <img
+          src="assets/cert-netacad.jpg"
+          alt="Cisco Netacad Certificate"
+          onerror="this.src='https://placehold.co/400x260/1a1a2e/6c63ff?text=Netacad+Certificate'"
+        />
+        <div class="achieve-meta">Cisco Networking Academy</div>
+        <h3>Introduction to Cybersecurity</h3>
+        <p class="achieve-date">📅 Completed: 2025</p>
+      </div>
 
+      <div class="achieve-card">
+        <img
+          src="assets/cert-yuvaai.jpg"
+          alt="YuvaAI Certificate"
+          onerror="this.src='https://placehold.co/400x260/1a1a2e/6c63ff?text=YuvaAI+Certificate'"
+        />
+        <div class="achieve-meta">INDIA AI · Nasscom FutureSkills Prime</div>
+        <h3>Yuva AI for All</h3>
+        <p class="achieve-date">📅 Issued: 2025</p>
+      </div>
+
+      <div class="achieve-card">
+        <img
+          src="assets/cert-coursera.jpg"
+          alt="Coursera Certificate"
+          onerror="this.src='https://placehold.co/400x260/1a1a2e/6c63ff?text=Coursera+Certificate'"
+        />
+        <div class="achieve-meta">Coursera — DeepLearning.AI</div>
+        <h3>Machine Learning Specialization</h3>
+        <p class="achieve-date">📅 Completed: 2025</p>
+      </div>
+
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🤖</div>
+        <h4>AI Enthusiast</h4>
+        <p>Completed multiple AI-focused certifications exploring modern tools, applications, and real-world use cases.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">💻</div>
+        <h4>Web Developer</h4>
+        <p>Built responsive portfolio and other web projects using HTML, CSS, and JavaScript deployed on GitHub Pages.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🌐</div>
+        <h4>Tech &amp; Networking</h4>
+        <p>Trained through Cisco Networking Academy, building technical knowledge in cybersecurity and networking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">What I've Done</div>
+    <h2 class="section-heading">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-tag">AI4A Project</div>
+        <img
+          src="assets/proj-ai4a.jpg"
+          alt="AI4A Project"
+          onerror="this.src='https://placehold.co/500x280/1a1a2e/6c63ff?text=AI4A+Project'"
+        />
+        <div class="project-body">
+          <h3>Yuva AI for All</h3>
+          <p>Participated in the Yuva AI for All program — exploring how artificial intelligence can be made accessible to communities across India.</p>
+          <a href="#" class="proj-link" target="_blank">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Web Development</div>
+        <img
+          src="assets/proj-portfolio.jpg"
+          alt="Portfolio Website"
+          onerror="this.src='https://placehold.co/500x280/1a1a2e/6c63ff?text=Portfolio+Website'"
+        />
+        <div class="project-body">
+          <h3>Student Digital Portfolio</h3>
+          <p>Designed and built this fully responsive personal portfolio website using HTML, CSS, and JavaScript. Deployed on GitHub Pages with dark/light mode toggle.</p>
+          <a href="#" class="proj-link" target="_blank">View Project →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Design Thinking</div>
+        <img
+          src="assets/proj-design.jpg"
+          alt="Design Thinking Project"
+          onerror="this.src='https://placehold.co/500x280/1a1a2e/a855f7?text=Design+Thinking'"
+        />
+        <div class="project-body">
+          <h3>Design Thinking Project</h3>
+          <p>Explored design thinking methodologies including empathy mapping, ideation, prototyping, and testing to solve real-world problems.</p>
+          <a href="#" class="proj-link" target="_blank">View Project →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="alt-section">
+    <div class="section-label">Visuals</div>
+    <h2 class="section-heading">Gallery</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/cert-netacad.jpg" alt="Netacad Certificate"
+          onerror="this.src='https://placehold.co/400x280/1a1a2e/6c63ff?text=Netacad+Cert'" />
+        <div class="gallery-label">Netacad Certificate</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/cert-yuvaai.jpg" alt="YuvaAI Certificate"
+          onerror="this.src='https://placehold.co/400x280/1a1a2e/6c63ff?text=YuvaAI+Cert'" />
+        <div class="gallery-label">YuvaAI Certificate</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/cert-coursera.jpg" alt="Coursera Certificate"
+          onerror="this.src='https://placehold.co/400x280/1a1a2e/6c63ff?text=Coursera+Cert'" />
+        <div class="gallery-label">Coursera Certificate</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="assets/profile.jpg" alt="My Photo"
+          onerror="this.src='https://placehold.co/400x280/1a1a2e/a855f7?text=My+Photo'" />
+        <div class="gallery-label">Your Name</div>
+      </div>
+    </div>
+
+    <!-- Skills Cloud -->
+    <div class="skills-cloud-section">
+      <div class="skills-label">✨ Extra Feature</div>
+      <h3>Skills Cloud</h3>
+      <p>A snapshot of domains I'm building expertise in.</p>
+      <div class="skills-cloud">
+        <span>Python</span><span>HTML &amp; CSS</span><span>JavaScript</span>
+        <span>Machine Learning</span><span>Artificial Intelligence</span>
+        <span>Data Science</span><span>GitHub</span><span>Design Thinking</span>
+        <span>Problem Solving</span><span>Teamwork</span><span>Communication</span>
+        <span>Networking</span><span>Leadership</span><span>Critical Thinking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="" />
+    <button id="lb-close" onclick="closeLightbox()">✕</button>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-heading">Contact Me</h2>
+    <p class="contact-intro">
+      I'm always open to opportunities, collaborations, and conversations.<br/>
+      Whether you're a future employer, fellow student, or just want to say hi — reach out!
+    </p>
+    <p class="contact-sub">📍 Based in Solapur, Maharashtra &nbsp;|&nbsp; 🎓 B.Tech CSE Student</p>
+
+    <div class="contact-cards">
+      <a href="mailto:yourname@email.com" class="contact-card">
+        <div class="cc-icon">📧</div>
+        <div>
+          <strong>Email</strong>
+          <span>yourname@email.com</span>
+        </div>
+      </a>
+      <a href="tel:+919999999999" class="contact-card">
+        <div class="cc-icon">📱</div>
+        <div>
+          <strong>Phone</strong>
+          <span>+91 99999 99999</span>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-card">
+        <div class="cc-icon">💼</div>
+        <div>
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/yourprofile</span>
+        </div>
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" class="contact-card">
+        <div class="cc-icon">🐙</div>
+        <div>
+          <strong>GitHub</strong>
+          <span>github.com/yourusername</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Your Name · B.Tech CSE Student Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
